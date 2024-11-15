@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Resume/CV Design</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+</head>
+<body>
+    <div id="resumeForm">
+    <form id="form">
+        <label for="imageInput">Upload an image:</label> 
+        <input required type="file" placeholder="Upload image" id="imageInput" accept="image/*" >
+        
+        <label for="name">Full Name:</label>
+        <input required type="text" id="name" placeholder="enter your full name" name="name" >
+
+        <label for="role">Role:</label>
+        <input required type="text" id="role" placeholder="Developer" name="role" >
+
+        <label for="address">Address:</label>
+        <input required type="text" id="address" name="address" placeholder="Karachi Pakistan" >
+
+        <label for="phone">Phone:</label>
+        <input required type="text" id="phone" placeholder="03492367403" name="phone" >
+
+        <label for="email">Email:</label>
+        <input required type="text" placeholder="shaukatazizpak@gmail.. Don't use big email beause resume genearte not good design" id="email" name="email" >
+
+        <label for="website">Website:</label>
+        <input required type="text" id="website" placeholder="upcoming.com if you have no website you can you upcoming.com" name="website" >
+
+        <div id="skills">
+         
+      </div>
+      <button type="button" id="addSkill">Add Skill</button>
+
+        <label for="facebook">Facebook:</label>
+        <input required type="text" id="facebook" placeholder="@shaukat" name="facebook" >
+
+        <label for="twitter">Twitter:</label>
+        <input required type="text" id="twitter" placeholder="@shaukat" name="twitter" >
+
+        <label for="youtube">YouTube:</label>
+        <input required type="text" id="youtube" placeholder="@shaukat" name="youtube" >
+
+        <label for="linkedin">LinkedIn:</label>
+        <input required type="text" id="linkedin" placeholder="@shaukat" name="linkedin" >
+
+        <label for="about">About Me:</label>
+        <textarea id="about" name="about" required placeholder="I am shaukat aziz . i am web Developer and soon on please deatails message give"></textarea>
+
+        <div id="workExperience">
+          
+      </div>
+      <button type="button" id="addWorkExperience">Add Work Experience</button>
+
+      <div id="education">
+        
+      </div>
+      <button type="button" id="addEducation">Add Education</button>
+
+        <button type="submit"> Generate Resume</button>
+    </form>
+
+
+
+</div>
+
+
+
+<div class="resume hidden" id="resume">
+   <div class="resume_left">
+     <div class="resume_profile">
+       <img id="profilePic" src="images/profile.jpg" alt="profile_pic" >
+     </div>
+     <div class="resume_content">
+       <div class="resume_item resume_info">
+         <div class="title">
+           <p class="bold" id="nameHere" >shaukat aziz</p>
+           <p class="regular" id="roleR">Developer</p>
+         </div>
+         <ul> 
+            <li> 
+                <div class="icon"> 
+                    <i class="fas fa-map-signs"></i> 
+                </div>
+                 <div class="data" id="addressR">
+                    Lea Market, Karachi <br /> PAK
+                </div> 
+            </li> 
+            <li> 
+                <div class="icon"> 
+                    <i class="fas fa-mobile-alt"></i> 
+                </div> 
+                <div class="data" id="phoneR">
+                    +92 3492367403
+                </div> 
+            </li> 
+            <li> 
+                <div class="icon"> <i class="fas fa-envelope"></i> </div> 
+                <div class="data" id="emailR">shaukatazizpak@gmail</div> 
+            </li> 
+            <li> <div class="icon"> <i class="fab fa-weebly"></i> 
+            </div> 
+            <div class="data" id="websiteR">www.upcoming.com</div>
+         </li>
+         </ul>
+       </div>
+       <div id="content" class="resume_item resume_skills  hideSection" data-section="skill">
+         <div class="title">
+           <p class="bold">skill's</p>
+         </div>
+         <ul id="resumeSkills">
+          
+         </ul>
+       </div>
+       <div class="resume_item resume_social">
+         <div class="title">
+           <p class="bold">Social</p>
+         </div>
+         <ul>
+           <li>
+             <div class="icon">
+               <i class="fab fa-facebook-square"></i>
+             </div>
+             <div class="data">
+               <p class="semi-bold" >Facebook</p>
+               <p id="facebookR">Shaukat@facebook</p>
+             </div>
+           </li>
+           <li>
+             <div class="icon">
+               <i class="fab fa-twitter-square"></i>
+             </div>
+             <div class="data">
+               <p class="semi-bold" >Twitter</p>
+               <p id="twitterR">Shaukat@twitter</p>
+             </div>
+           </li>
+           <li>
+             <div class="icon">
+               <i class="fab fa-youtube"></i>
+             </div>
+             <div class="data">
+               <p class="semi-bold">Youtube</p>
+               <p id="youtubeR">Shaukat@youtube</p>
+             </div>
+           </li>
+           <li>
+             <div class="icon">
+               <i class="fab fa-linkedin"></i>
+             </div>
+             <div class="data">
+               <p class="semi-bold">Linkedin</p>
+               <p id="linkedinR">Shaukat@linkedin</p>
+             </div>
+           </li>
+         </ul>
+       </div>
+     </div>
+  </div>
+  <div class="resume_right">
+    <div class="resume_item resume_about">
+        <div class="title">
+           <p class="bold">About us</p>
+         </div>
+        <p id="aboutR">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis illo fugit officiis distinctio culpa officia totam atque exercitationem inventore repudiandae?</p>
+    </div>
+    <div class="resume_item resume_work hideSection" data-section="work">
+        <div class="title">
+           <p class="bold">Work Experience</p>
+         </div>
+         <ul id="workExperienceR"></ul>
+    </div>
+    <div class="resume_item resume_education hideSection" data-section="education">
+      <div class="title">
+           <p class="bold">Education</p>
+         </div>
+         <ul id="educationR">
+        </ul>
+    </div>
+    <div class="resume_item resume_hobby">
+      <div class="title">
+           <p class="bold">Hobby</p>
+         </div>
+       <ul>
+         <li><i class="fas fa-book"></i></li>
+         <li><i class="fas fa-gamepad"></i></li>
+         <li><i class="fas fa-music"></i></li>
+         <li><i class="fab fa-pagelines"></i></li>
+      </ul>
+    </div>
+  </div>
+  
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html> 
